@@ -26,9 +26,7 @@ public class greenscreen
     {
       image = ImageIO.read(new File(file));
     }
-    catch(IOException e)
-    {
-    }
+    catch(IOException e) {}
 
     // Track the loading of the image
     MediaTracker tracker = new MediaTracker(new Component() {});
@@ -210,7 +208,7 @@ public class greenscreen
       try
       {
         tolerance = Float.parseFloat(toleranceString); // Reading the tolerance from the user
-        if((tolerance < 1.0) || (tolerance > 10.0)) // If outside the range
+        if((tolerance < 1.0) || (tolerance > 10.0))    // If outside the range
         {
           System.out.println("Please stay within the range of 1.0 to 10.0. Exiting...");
           return;
@@ -241,7 +239,7 @@ public class greenscreen
     {
       width = repImage.getWidth(null);
     }
-    //If they are equal, do nothing
+    // If they are equal, do nothing
 
     BufferedImage gsImageReplace = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB); // Create new images for scaling
     BufferedImage repImageReplace = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
